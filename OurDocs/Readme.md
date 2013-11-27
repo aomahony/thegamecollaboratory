@@ -1,3 +1,5 @@
+ git subtree push --prefix source/thegamecollaboratory heroku master
+
 ##Project Documents
 
 The "OurDocs" folder is where project-specific documents will be stored.  However, I would
