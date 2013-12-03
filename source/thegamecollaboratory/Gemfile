@@ -45,6 +45,8 @@ gem "thin", "> 1.5.1"
 
 gem "devise"
 
+gem "rails_admin"
+
 group :production do
   gem 'rails_12factor'
 end
