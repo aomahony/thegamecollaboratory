@@ -53,7 +53,6 @@ RailsAdmin.config do |config|
 
 
    config.model 'User' do
-      navigation_label 'Users'
       list do
          field :email
          field :first_name
@@ -68,7 +67,7 @@ RailsAdmin.config do |config|
             end
          end       
       end 
-   end 
+   end
 
   ###  User  ###
 

@@ -26,6 +26,23 @@ Ruby on Rails application
 
 Use spaces instead of tabs
 Each tab represents 3 spaces
+You can download a SublimeText preferences file for this
+
+All brackets should go on the line following the statement (their own line)
+
+For CoffeeScript:
+
+if (variableIsTrue)
+{
+   console.log("It is true!")
+}
+
+For SASS:
+
+div.somestyle
+{
+   color: red;
+}
 
 In CoffeeScript, any jQuery object should be prefixed with a '$'
 A jQuery object is any variable that is attained using jQuery methods
@@ -89,6 +106,12 @@ Into your terminal window.
         create database template1 with template = template0 encoding = 'UTF8' LC_CTYPE = 'en_US.utf8' LC_COLLATE = 'en_US.utf8';
         update pg_database set datistemplate = TRUE where datname = 'template1';
         \q
+
+9. To run the Rails server and test out your work, type:
+   "rails s"
+   in the Terminal and then open your browser and surf to "http://localhost:3000"
+
+## Test your Setup
 
 ## Development Process
 

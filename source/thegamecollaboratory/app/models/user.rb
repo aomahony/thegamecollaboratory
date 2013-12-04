@@ -5,6 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable
 
+   has_many :games
+   has_many :comments
+
    def is_super?
       2 == self.role.to_i ? true : false
    end
