@@ -18,9 +18,9 @@ Ruby on Rails application
 
 ## Front-End Technologies
 
-- CoffeeScript: Used in place of Javascript, compiles into Javascript
-- HAML: Used for all layouts, compiles into HTML
-- SASS: Used for all stylesheets, compiles into CSS
+- CoffeeScript: Used in place of Javascript, compiles into Javascript [CoffeeScript](http://coffeescript.org)
+- HAML: Used for all layouts, compiles into HTML [HAML](http://haml.info)
+- SASS: Used for all stylesheets, compiles into CSS [SASS](http://sass-lang.com)
 
 ## Coding Style
 
@@ -104,8 +104,9 @@ root directory (the one with the source and vm and OurDocs folders) and type:
 
 git add .
 git add -u .
-git commit -m"$MESSAGE"
+git commit -m"$YOUR_NAME:$MESSAGE"
 
+where $YOUR_NAME is your first initial and last name, ("Julius Caesar" = "jcaesar")
 where $MESSAGE is a detailed message of what you've done in the commit.
 
 Then, to push to your remote branch, simply type: "git push origin $BRANCH_NAME"
