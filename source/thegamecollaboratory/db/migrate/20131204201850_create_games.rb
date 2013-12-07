@@ -12,6 +12,7 @@ class CreateGames < ActiveRecord::Migration
       t.string :gold, :null => true
       t.string :shipped, :null => true
       t.string :current_request, :null => false, :default => ""
+      t.timestamps
     end
   end
 end

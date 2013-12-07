@@ -17,26 +17,30 @@ ActiveRecord::Schema.define(version: 20131204225549) do
   enable_extension "plpgsql"
 
   create_table "comments", force: true do |t|
-    t.integer "user_id"
-    t.integer "game_id"
-    t.string  "text",    null: false
+    t.integer  "user_id"
+    t.integer  "game_id"
+    t.string   "text",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "comments", ["game_id"], name: "index_comments_on_game_id", using: :btree
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "games", force: true do |t|
-    t.integer "user_id"
-    t.string  "name",                         null: false
-    t.string  "effect",                       null: false
-    t.string  "idea"
-    t.string  "prototype"
-    t.string  "first_playable"
-    t.string  "alpha"
-    t.string  "beta"
-    t.string  "gold"
-    t.string  "shipped"
-    t.string  "current_request", default: "", null: false
+    t.integer  "user_id"
+    t.string   "name",                         null: false
+    t.string   "effect",                       null: false
+    t.string   "idea"
+    t.string   "prototype"
+    t.string   "first_playable"
+    t.string   "alpha"
+    t.string   "beta"
+    t.string   "gold"
+    t.string   "shipped"
+    t.string   "current_request", default: "", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "games", ["user_id"], name: "index_games_on_user_id", using: :btree
