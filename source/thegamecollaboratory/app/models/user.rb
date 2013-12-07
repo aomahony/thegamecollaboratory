@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable,
-         :confirmable
+   devise :database_authenticatable, :registerable,
+          :recoverable, :rememberable, :trackable, :validatable,
+          :confirmable
 
    has_many :games
    has_many :comments
@@ -32,6 +32,7 @@ class User < ActiveRecord::Base
 
    protected
       def confirmation_required?
-        !self.is_admin?
+         false
+         #!self.is_admin?
       end        
 end

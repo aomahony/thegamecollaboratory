@@ -46,9 +46,14 @@ gem "bootstrap-sass", "~> 2.2.2.0"
 
 gem "thin", "> 1.5.1"
 
+# User devise for authentication
 gem "devise"
 
+# Use RailsAdmin for administering the website
 gem "rails_admin"
+
+# Use cancan for authorization
+gem "cancan"
 
 group :production do
   gem 'rails_12factor'
