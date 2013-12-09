@@ -1,4 +1,0 @@
-thegamecollaboratory
-====================
-
-The Game Collaboratory
