@@ -1,13 +1,9 @@
-// Place all the styles related to the Welcome controller here.
+// Place all the styles related to the landing controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-p.error
+div.welcome
 {
    color: red;
-}
-
-div.login-links
-{
-   font-size: 9px;
+   background-color: blue;
 }
