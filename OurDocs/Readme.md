@@ -2,6 +2,10 @@
 
 Andrew O'Mahony - andrewsomahony@gmail.com
 
+## Notes
+
+Most of these instructions have only been tested on my OSX machine.
+
 ## Project Documents
 
 The "OurDocs" folder is where project-specific documents will be stored.  However, I would
@@ -58,7 +62,8 @@ The source code is hosted on a GitHub server.
 
 You can install git and read a bit about it here: [Git](https://help.github.com/articles/set-up-git)
 
-To clone the repository, simply type:
+To clone the repository, simply open a Terminal, change to the directory you want the source *folder*
+to go, and type:
 
 git clone -b master https://github.com/aomahony/thegamecollaboratory.git
 
@@ -109,11 +114,31 @@ Into your terminal window.
 
 9. To run the Rails server and test out your work, type:
    "rails s"
-   in the Terminal and then open your browser and surf to "http://localhost:3000"
-
-## Test your Setup
+   in the Terminal 
+   and then open your browser and surf to "http://localhost:3000"
 
 ## Development Process
+
+Each time you sit down to work:
+
+1. In Terminal, `cd vm` in your git checkout.
+
+2. Run and enter the VM
+        vagrant up
+        vagrant ssh
+        cd thegamecollaboratory
+
+3. Update Rails
+        bundle install
+        rake db:migrate
+
+4. Run services
+        rails s
+
+5. Interact with Rails
+    - open http://localhost:3000 in your web browser
+    - enter the rails console with `rails console`
+    - enter the database console with `rails db` (or on the staging server, `RAILS_ENV=staging rails db -p`)
 
 I'd like all work to be done on our own remote branches.
 
