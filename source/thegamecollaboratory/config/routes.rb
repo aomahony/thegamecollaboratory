@@ -8,6 +8,8 @@ Thegamecollaboratory::Application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'landing#index'
 
+   post 'landing/submit' => 'landing#submit'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

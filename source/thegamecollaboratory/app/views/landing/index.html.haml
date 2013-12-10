@@ -1,1 +1,10 @@
 %div.welcome Welcome to The Game Collaboratory
+
+%div
+   = form_tag('/landing/submit.json', :method => :post, :remote => true) do
+      = label_tag(:email, "E-Mail Address")
+      = text_field(:email_list, :email)
+      = submit_tag("Submit", :class=>"btn btn-primary btn-small")
+
+%div.success{'style' => 'display: none;'}
+%div.error{'style' => 'display: none;'}
