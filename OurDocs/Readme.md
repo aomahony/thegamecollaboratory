@@ -95,7 +95,25 @@ Into your terminal window.
 7. Setup Rails
         sudo apt-get install libpq-dev  # Enter "Y" when prompted
         bundle install
-*Note:* if you get an error saying that Bundler cannot continue, run "bundle update" then "bundle install"
+
+*NOTE* If you get an error saying that bundler cannot continue, follow step 7a
+OTHERWISE skip to step 8
+
+7a. Set permissions
+
+   Type these commands:
+   cd /usr/local/rvm/gems/
+   ls -l
+
+   *You should see a file named something like ruby-2.0.0-pXXX * Where XXX is a number.
+
+   Type:
+   sudo chown -R vagrant ruby-2.0.0-pXXX
+
+   Where XXX is the number you see
+
+   Type:
+   bundle install
 
 8. Setup the database
         rake db:create
@@ -142,7 +160,7 @@ Each time you sit down to work:
 
 I'd like all work to be done on our own remote branches.
 
-To make a remote branch, simply type "git checkout $BRANCH_NAME" where $BRANCH_NAME is the name of the branch
+To make a remote branch, simply type "git checkout -b $BRANCH_NAME" where $BRANCH_NAME is the name of the branch
 
 I'd like the branches to be named after the developer, so if your name is "Julius Caesar",
 then the branch name is: "jcaesar_dev"

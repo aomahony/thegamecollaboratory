@@ -14,7 +14,7 @@ class LandingController < ApplicationController
       if nil == existingEmail
          begin
             EmailList.create! email_list_params
-            message = "Thank you for signing up #{params[:email_list][:email]}!"
+            message = "Thank you for signing up, #{params[:email_list][:email]}!"
          rescue => exception
             message = exception.message
             status = :unprocessable_entity
@@ -28,6 +28,16 @@ class LandingController < ApplicationController
 
    # GET
    def remove
+      emailObject = EmailList.find_by :hash => params[:hash]
+
+      if nil == emailObject
+         @message = "E-Mail address not found!"
+      else
+         emailObject.is_active = false
+         emailObject.save
+
+         @message = "#{emailObject.email} has been removed from our e-mail list"
+      end
    end
 
    private
