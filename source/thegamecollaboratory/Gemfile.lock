@@ -25,6 +25,7 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
+    addressable (2.3.5)
     arel (4.0.1)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
@@ -41,6 +42,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    css_parser (1.3.5)
+      addressable
     daemons (1.1.9)
     devise (3.2.2)
       bcrypt-ruby (~> 3.0)
@@ -52,6 +55,7 @@ GEM
       activesupport (>= 3.2)
     erubis (2.7.0)
     eventmachine (1.0.3)
+    excon (0.30.0)
     execjs (2.0.2)
     font-awesome-rails (4.0.3.0)
       railties (>= 3.2, < 5.0)
@@ -61,6 +65,7 @@ GEM
     haml (4.0.4)
       tilt
     hike (1.2.3)
+    htmlentities (4.3.1)
     i18n (0.6.5)
     jbuilder (1.5.2)
       activesupport (>= 3.0.0)
@@ -77,6 +82,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mailchimp-api (2.0.4)
+      excon (>= 0.16.0)
+      json (>= 1.7.7)
     mime-types (1.25)
     mini_portile (0.5.2)
     minitest (4.7.5)
@@ -87,6 +95,12 @@ GEM
     orm_adapter (0.5.0)
     pg (0.17.0)
     polyglot (0.3.3)
+    premailer (1.7.9)
+      css_parser (>= 1.1.9)
+      htmlentities (>= 4.0.0)
+    premailer-rails (1.6.0)
+      actionmailer (>= 3, < 5)
+      premailer (~> 1.7, >= 1.7.9)
     rack (1.5.2)
     rack-pjax (0.7.0)
       nokogiri (~> 1.5)
@@ -182,7 +196,10 @@ DEPENDENCIES
   haml (~> 4.0.4)
   jbuilder (~> 1.2)
   jquery-rails
+  mailchimp-api
+  nokogiri
   pg (~> 0.15)
+  premailer-rails
   rails (= 4.0.1)
   rails_12factor
   rails_admin

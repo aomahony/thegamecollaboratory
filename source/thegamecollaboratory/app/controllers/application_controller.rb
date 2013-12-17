@@ -5,6 +5,22 @@ class ApplicationController < ActionController::Base
 
    before_filter :authenticate 
 
+   before_action :setup_mcapi
+
+   def setup_mcapi
+      @mc = Mailchimp::API.new('8112dcf6d61202b3baa991f70ad1d437-us3')
+
+      lists = @mc.lists.list
+      newsletterId = '6dd33ebf12'
+
+      lists['data'].each do |list|
+         if newsletterId == list['id']
+            @mcNewsletterList = list
+            break
+         end
+      end
+   end
+
    rescue_from CanCan::AccessDenied do |exception|
       redirect_to main_app.root_path, :alert => exception.message
    end
