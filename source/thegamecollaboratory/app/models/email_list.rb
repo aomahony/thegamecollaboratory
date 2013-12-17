@@ -3,6 +3,11 @@ class EmailList < ActiveRecord::Base
    before_create :create_hash
    validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 
+   def unsubscribe
+      self.is_active = false
+      self.save
+   end
+
    private
       def create_hash
          self.unique_hash = get_hash

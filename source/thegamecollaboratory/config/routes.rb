@@ -9,6 +9,7 @@ Thegamecollaboratory::Application.routes.draw do
    root 'landing#index'
 
    post 'landing/submit' => 'landing#submit'
+   get 'landing/remove/(:hash)' => 'landing#remove'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

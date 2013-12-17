@@ -28,6 +28,5 @@ module Thegamecollaboratory
 
       # Heroku requires this to be false
       config.assets.initialize_on_precompile = false
-
    end
 end
