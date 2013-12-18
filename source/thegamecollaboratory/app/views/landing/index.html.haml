@@ -1,8 +1,13 @@
-%div.welcome Welcome to The Game Collaboratory
+<link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+#top-box
+   #logo <img src="assets/logo.png"></img>
+   #headline coming soon...
+   #subhead an exciting new marketing tool<br>for Game Designers and Developers
+<br>
 
 %div
    = form_tag('/landing/submit.json', :method => :post, :remote => true) do
-      = label_tag(:email, "E-Mail Address")
+      = label_tag(:email, "sign up to be notified when the Game Collaboratory goes live")
       = text_field(:email_list, :email)
       = submit_tag("Submit", :class=>"btn btn-primary btn-small")
 

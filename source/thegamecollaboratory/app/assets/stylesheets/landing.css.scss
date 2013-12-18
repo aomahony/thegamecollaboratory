@@ -2,10 +2,59 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body
+{
+    background-color:#431550;
+    background-image:url(background_gradient.jpg);
+    background-repeat:repeat-x;
+    color:white;
+}    
+
+div {
+    width:900px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+div#top-box {
+    width:900px;
+    height:512px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
+}
+
+div#logo {
+    height:512px;
+    width:275px;
+    float:left;
+}
+
+div#headline {
+    height:40px;
+    width:600px;
+    font-family: 'Share Tech Mono', sans-serif;
+    font-size:36px;
+    color:white;
+    float:left;
+    margin-left:25px;
+    margin-top:20px;
+    float:left;
+}
+
+div#subhead {
+    height:412px;
+    width:600px;
+    float:left;
+    font-family: 'Share Tech Mono', sans-serif;
+    font-size:24px;
+    color:white;
+    margin-left:25px;
+}
+
 div.welcome
 {
-   color: black;
-   background-color: yellow;
+   color: white;
 }
 
 div.error
