@@ -113,6 +113,7 @@ OTHERWISE skip to step 8
    Where XXX is the number you see
 
    Type:
+   cd ~/thegamecollaboratory
    bundle install
 
 8. Setup the database
